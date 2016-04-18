@@ -1,0 +1,30 @@
+{
+  "name": "express-console-warning",
+  "version": "0.0.0",
+  "description": "Express Interceptor for warning at console",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "express",
+    "middleware",
+    "console",
+    "warning"
+  ],
+  "author": "Tan Li Hau",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^0.20.0",
+    "express-interceptor": "^1.2.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tanhauhau/express-console-warning.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tanhauhau/express-console-warning/issues"
+  },
+  "homepage": "https://github.com/tanhauhau/express-console-warning#readme"
+}
