@@ -1,6 +1,6 @@
 {
   "name": "express-console-warning",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Express middleware for console message in every html pages",
   "main": "index.js",
   "scripts": {
