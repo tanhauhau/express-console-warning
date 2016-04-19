@@ -8,7 +8,7 @@ var warningInterceptor = interceptor(function(req, res){
         },
         intercept: function(body, send) {
             var $document = cheerio.load(body);
-            $document('body').append('<script src="https://cdn.rawgit.com/tanhauhau/console-warning/master/warning.min.js" type="text/javascript"></script>');
+            $document('body').append('<script src="https://cdn.rawgit.com/tanhauhau/console-warning/v1.0/warning.min.js" type="text/javascript"></script>');
             send($document.html());
         }
     };
