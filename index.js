@@ -8,7 +8,7 @@ var scriptToInject = "";
 var konsole = {
     image: function(url, scale){
         scale = scale || 1;
-        scriptToInject = scriptToInject + printf(".image('%s', %d)", url, scale);
+        scriptToInject = scriptToInject + printf(".image('%s', %f)", url, scale);
         return konsole;
     },
     log: function(text){
@@ -28,7 +28,7 @@ var konsole = {
         return konsole;
     },
     text: function(text, attr){
-        scriptToInject = scriptToInject + printf(".WARN('%s', %j)", cleanText(text), attr);
+        scriptToInject = scriptToInject + printf(".text('%s', %j)", cleanText(text), attr);
         return konsole;
     },
     default: function(){
