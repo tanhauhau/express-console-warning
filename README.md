@@ -4,11 +4,21 @@ Express middleware for [console-warning](https://github.com/tanhauhau/console-wa
 
 ## Installation
 
+*v1.x*
+
 ```bash
-npm install --save express-console-warning
+npm install --save express-console-warning@1.x
+```
+
+*v2.x*
+
+```bash
+npm install --save express-console-warning@2.x
 ```
 
 ## Usage
+
+*v1.x*
 
 ```javascript
 var express = require('express');
@@ -21,9 +31,48 @@ app.get('/', function(req, res){
 });
 ```
 
+*v2.x*
+
+```javascript
+var express = require('express');
+var hiringAtConsole = require('express-console-warning');
+var app = express();
+
+app.use(hiringAtConsole.LOG('We\'re hiring http://hiring.me')
+                       .text('Come Join Us', {color: 'blue'})
+                       .build());
+
+// or
+
+app.use(hiringAtConsole.default()); //fallback to v1.x
+```
 ## Explanation
 
+*v1.x*
+
 What this middleware will do is to inject `<script src="https://cdn.rawgit.com/tanhauhau/console-warning/master/warning.min.js" type="text/javascript"></script>` into any reply that delivers html page. So the script will run and log a warning sign in your console.
+
+*v2.x*
+
+What this middleware will do is inject a `<script>` tag with `console-warning` script into your html document `<body>`. It won't pollute your global namespace, so you don't have to worry about it.
+
+**Documentation**
+
+`var konsole = require('express-console-warning');`
+
+* `konsole.default()` - Print out the same message as for *v1.x*
+
+The following method is chainable and must call `.build()` in the end:
+
+* `konsole.log(text)` - Log a normal text to console
+* `konsole.LOG(text)` - Log a big text to console
+* `konsole.warn(text)` - Warn a normal text to console
+* `konsole.WARN(text)` - Warn a big text to console, with red background and yello font
+* `konsole.image(url, scale)` - Print image to console
+* `konsole.text(text, attr)` - Log a text with specified attributes to console.
+	* Available attributes: `background`,`color`,`fontSize`, use it as you would for css styling
+
+
 
 ## License
 

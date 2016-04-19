@@ -1,7 +1,7 @@
 {
   "name": "express-console-warning",
   "version": "1.0.1",
-  "description": "Express Interceptor for warning at console",
+  "description": "Express middleware for console message in every html pages",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,7 +16,8 @@
   "license": "MIT",
   "dependencies": {
     "cheerio": "^0.20.0",
-    "express-interceptor": "^1.2.0"
+    "express-interceptor": "^1.2.0",
+    "sprintf-js": "^1.0.3"
   },
   "devDependencies": {},
   "repository": {
